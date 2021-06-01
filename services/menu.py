@@ -40,8 +40,9 @@ class Menu:
                         break
 
                     print('对应的价格为' + str('%.2f' % meter.distance_to_price(dis)))
-                    file_operator.append('里程数：' + str('%.2f' % dis) + '  ' + '价格：' +
-                                         str('%.2f' % meter.distance_to_price(dis)) + '  （手动输入里程）')
+                    if dis >= 0:
+                        file_operator.append('里程数：' + str('%.2f' % dis) + '  ' + '价格：' +
+                                             str('%.2f' % meter.distance_to_price(dis)) + '  （手动输入里程）')
             elif option == 2:
                 while True:
                     print('')
